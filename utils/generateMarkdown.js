@@ -29,7 +29,7 @@ function generateMarkdown(data) {
   ${data.testing}
 
   ## Contact
-  If you have any questions regarding this project, feel free to contact me directly at ${data.contact}.
+  If you have any questions regarding this project, feel free to contact me directly at ${data.contact}, or on my GitHub at https://github.com/${data.github}.
 `;
 }
 

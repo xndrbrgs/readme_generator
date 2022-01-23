@@ -52,6 +52,12 @@ const questions = () => {
                 name: "contact",
                 message: "What is your best contact email?",
             },
+            {
+                type: "input",
+                name: "github",
+                message: "What is your GitHub username?",
+            },
+
         ]);
         
 };
