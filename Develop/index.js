@@ -3,38 +3,44 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const readmeGenerate = require('./utils/generateMarkdown')
 // TODO: Create an array of questions for user input
-const questions = [
-  {
-    type: "input",
-    name: "title",
-    message: "What is the name of your project?",
-  },
-  {
-    type: "input",
-    name: "hobby",
-    message: "What is your favorite hobby?",
-  },
-  {
-    type: "input",
-    name: "food",
-    message: "What is your favorite food?",
-  },
-  {
-    type: "input",
-    name: "github",
-    message: "Enter your GitHub Username",
-  },
-  {
-    type: "input",
-    name: "linkedin",
-    message: "Enter your LinkedIn URL.",
-  },
-  {
-    type: "input",
-    name: "contact",
-    message: "Enter your email address!",
-  },
-];
+const questions = () => {
+    inquirer
+        .prompt([
+            {
+                type: "input",
+                name: "title",
+                message: "What is the name of your project?",
+            },
+            {
+                type: "input",
+                name: "about",
+                message: "Enter a brief description of the project.",
+            },
+            {
+                type: "input",
+                name: "install",
+                message: "What are the steps to be able to install this project?",
+            },
+            {
+                type: "input",
+                name: "licensing",
+                message: "What licensing is ditributing this project?",
+                choices: ['MIT', 'GNU'],
+                default: ['MIT'],
+            },
+            {
+                type: "input",
+                name: "contribute",
+                message: "Explain the process for new users to contribute to this project.",
+            },
+            {
+                type: "input",
+                name: "testing",
+                message: "Which commands need to be run in order for this project to commit tests?",
+                default: "nmp test",
+            },
+        ]);
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
