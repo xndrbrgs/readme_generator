@@ -33,7 +33,7 @@ function generateMarkdown(data) {
   ${data.install}
 
   ##Licensing
-  This project is licensed under ${data.licensing}
+  Distributed under ${data.licensing} licensing. 
 
   ##Contributing
   ${data.contribute}
