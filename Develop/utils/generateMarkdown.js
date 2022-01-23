@@ -19,7 +19,30 @@ function generateMarkdown(data) {
   ${data.description}
 
   ##Table of Contents
-  *
+  *[About The Project](#about)
+  *[Installation](#installation)
+  *[Licensing](#license)
+  *[Contributing](#contribute)
+  *[Testing](#tests)
+  *[Contact](#contact)
+
+  ##About The Project
+  ${data.about}
+
+  ##Installation
+  ${data.install}
+
+  ##Licensing
+  This project is licensed under ${data.licensing}
+
+  ##Contributing
+  ${data.contribute}
+
+  ##Testing
+  ${data.testing}
+
+  ##Contact
+  If you have any questions regarding this project, feel free to contact me directly at ${data.contact}.
 `;
 }
 
